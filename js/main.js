@@ -18,7 +18,7 @@ const allCircleDom = document.querySelector('.allCircle');
 //grazie al ciclo for e all'implementazione tramite backtick
 // creiamo i contenitori oscurati nell HTML
 
-for (let i = 0; i < imageArray.length - 1; i++){
+for (let i = 0; i < imageArray.length; i++){
     listDom.innerHTML +=    `<div class="imgContainer">
                                 <img class="image" src="${imageArray[i]}">
                             </div>`;
@@ -33,6 +33,44 @@ const circle = document.querySelectorAll('.circle');
 
 imgContainer[imageActive].classList.add('show');
 circle[imageActive].classList.add('active');
+
+
+//facciamo in modo che al click della freccia, la foto cambi
+
+const arrowUp = document.querySelector('.arrowUp');
+const arrowDown = document.querySelector('.arrowDown');
+
+arrowDown.addEventListener('click', 
+    function(){
+        imgContainer[imageActive].classList.remove('show');
+        circle[imageActive].classList.remove('active');
+        imageActive++;
+        imgContainer[imageActive].classList.add('show');
+        circle[imageActive].classList.add('active');
+
+        arrowUp.classList.remove('none');
+
+        if(slideAttiva == itemList.length - 1){
+            arrowDown.classList.add('none');
+        }
+    }
+);
+
+arrowUp.addEventListener('click', 
+    function(){
+        imgContainer[imageActive].classList.remove('show');
+        circle[imageActive].classList.remove('active');
+        imageActive--;
+        imgContainer[imageActive].classList.add('show');
+        circle[imageActive].classList.add('active');
+
+        arrowDown.classList.remove('none');
+
+        if(slideAttiva == 0){
+            arrowUp.classList.add('none');
+        }
+    }
+);
 
 
 

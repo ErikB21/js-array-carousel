@@ -77,3 +77,7 @@
 .circle.active{
     background-color: white;
 }
+
+.none{
+    display: none;
+}
