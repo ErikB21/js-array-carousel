@@ -50,8 +50,7 @@ arrowDown.addEventListener('click',
 
         arrowUp.classList.remove('none');
 
-        if(imageActive == imageArray.length - 1){
-            arrowDown.classList.add('none');
+        if(imageActive == imageArray.length - 1){ 
         }
     }
 );
