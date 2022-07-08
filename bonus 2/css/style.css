@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.listContainer{
+    width: 50%;
+    height: 80vh;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.list{
+    width: 100%;
+    height: 80vh;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.arrowUp{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.arrowDown{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.allCircle{
+    height: 80vh;
+    margin: 20px 0;
+}
+
+.circle{
+    width: 100%;
+    height: 20%;
+    opacity: 0.5;
+}
+
+.image2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle.active{
+    opacity: 1;
+    border: 2px solid royalblue;
+}
+
+.none{
+    display: none;
+}
