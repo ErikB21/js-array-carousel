@@ -46,7 +46,13 @@ arrowDown.addEventListener('click',
     function(){
         imgContainer[imageActive].classList.remove('show');
         circle[imageActive].classList.remove('active');
-        imageActive++;
+
+        if(imageActive == imageArray.length - 1){
+            imageActive = 0;
+        }else{
+            imageActive++;   
+        }
+        
         imgContainer[imageActive].classList.add('show');
         circle[imageActive].classList.add('active');
 
@@ -62,7 +68,13 @@ arrowUp.addEventListener('click',
     function(){
         imgContainer[imageActive].classList.remove('show');
         circle[imageActive].classList.remove('active');
-        imageActive--;
+
+        if(imageActive == 0){
+            imageActive = imageArray.length - 1;
+        }else{
+            imageActive--;
+        }
+
         imgContainer[imageActive].classList.add('show');
         circle[imageActive].classList.add('active');
 
