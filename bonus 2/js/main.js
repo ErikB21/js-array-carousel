@@ -57,10 +57,6 @@ arrowDown.addEventListener('click',
         circle[imageActive].classList.add('active');
 
         arrowUp.classList.remove('none');
-
-        if(imageActive == imageArray.length - 1){
-            
-        }
     }
 );
 
@@ -79,9 +75,6 @@ arrowUp.addEventListener('click',
         circle[imageActive].classList.add('active');
 
         arrowDown.classList.remove('none');
-
-        if(imageActive == 0){
-        }
     }
 );
 
